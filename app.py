@@ -1,14 +1,18 @@
-from langchain.vectorstores.cassandra import Cassandra
-from langchain.indexes.vectorstore import VectorStoreIndexWrapper
-from langchain.llms import OpenAI
-from langchain.embeddings import OpenAIEmbeddings
-
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 
 from datasets import load_dataset
 
+from dotenv import load_dotenv
+
+from langchain.vectorstores.cassandra import Cassandra
+from langchain.indexes.vectorstore import VectorStoreIndexWrapper
+from langchain.llms import OpenAI
+from langchain.embeddings import OpenAIEmbeddings
+
 import os
+
+load_dotenv()
 
 ASTRA_DB_SECURE_BUNDLE_PATH = "D:\\Users\\Julien\\Documents\\developpement\\python\\embedding-knowledge\\secure-connect-vector-database.zip"
 ASTRA_DB_APPLICATION_TOKEN = "AstraCS:QMnMDNSekBwcZCCHRmaeqZFI:b2e2fa8e9ca207fcb4e6c35cbbf0be3975c208eb8d20dbfc45259a61bbd25e36"
